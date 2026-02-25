@@ -30,14 +30,13 @@ public class LinkedListTrain {
      *
      * @param wagon the wagon node to add
      */
+// Opgave 1
     public void addFirst(WagonNode wagon) {
         if (this.firstWagon != null) {
             wagon.setNextWagon(this.firstWagon);
         }
         firstWagon = wagon;
 
-
-        // TODO: Assignment 1: Implement this add method...
 
         //throw new UnsupportedOperationException("Not implemented");
     }
@@ -48,6 +47,9 @@ public class LinkedListTrain {
      * @return the removed wagon node
      * @throws NoSuchElementException if the train has no wagon nodes
      */
+
+
+    // Opgave 2
     public WagonNode removeFirst() {
         if (this.firstWagon == null) {
             throw new NoSuchElementException("Toget er tomt");
@@ -63,8 +65,9 @@ public class LinkedListTrain {
      *
      * @return the number of wagon nodes
      */
+
+    // Opgave 3
     public int count() {
-        // TODO: Assignment 3: Implement this count method...
         WagonNode temp = firstWagon;
         int count = 0;
         while (temp != null) {
@@ -82,6 +85,8 @@ public class LinkedListTrain {
      * @return <code>true</code> if the wagon node was found and removed;
      * <code>false</code> otherwise
      */
+
+    // Opgave 4
     public boolean remove(WagonNode wagon) {
         // TODO: Assignment 4: Implement this remove method..
         if (this.firstWagon == wagon) {
@@ -105,8 +110,9 @@ public class LinkedListTrain {
      * @param wagon    the wagon node to add
      * @param position the position where to add the wagon node
      */
+
+    // Opgave 5
     public void insertAt(WagonNode wagon, int position) {
-        // TODO: Assignment 5: Implement this insert method...
         int currentPos = 0;
         WagonNode currentWagon = firstWagon;
         while (currentPos < position) {

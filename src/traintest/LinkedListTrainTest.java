@@ -14,6 +14,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 import train.LinkedListTrain;
+import train.LinkedListTrain2;
 import train.WagonNode;
 
 @TestMethodOrder(OrderAnnotation.class)
@@ -238,4 +239,48 @@ class LinkedListTrainTest
         wagonSelected = wagonSelected.getNextWagon();
         assertEquals(wagon5, wagonSelected);
     }
-}
+    @Test
+    @Order(6)
+   void test_linkedListTrain2_canAddLastWagon(){
+        // --------------------------------------------------
+        // ARRANGE
+        // --------------------------------------------------
+
+        LinkedListTrain2 train = new LinkedListTrain2();
+
+        // --------------------------------------------------
+        // ACT
+        // --------------------------------------------------
+
+        train.addLast(locomotive);
+        train.addLast(wagon1);
+        train.addLast(wagon2);
+        train.addLast(wagon3);
+        train.addLast(wagon4);
+        train.addLast(wagon5);
+
+        // --------------------------------------------------
+        // ASSERT
+        // --------------------------------------------------
+
+        WagonNode wagonSelected = train.getFirst();
+        assertEquals(locomotive, wagonSelected);
+
+        wagonSelected = wagonSelected.getNextWagon();
+        assertEquals(wagon1, wagonSelected);
+
+        wagonSelected = wagonSelected.getNextWagon();
+        assertEquals(wagon2, wagonSelected);
+
+        wagonSelected = wagonSelected.getNextWagon();
+        assertEquals(wagon3, wagonSelected);
+
+        wagonSelected = wagonSelected.getNextWagon();
+        assertEquals(wagon4, wagonSelected);
+
+        wagonSelected = wagonSelected.getNextWagon();
+        assertEquals(wagon5, wagonSelected);
+    }
+
+    }
+
