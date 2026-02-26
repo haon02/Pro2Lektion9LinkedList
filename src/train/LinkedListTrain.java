@@ -55,7 +55,7 @@ public class LinkedListTrain {
             throw new NoSuchElementException("Toget er tomt");
         }
         WagonNode removedWagon = this.firstWagon;
-        this.firstWagon = this.firstWagon.getNextWagon();
+        this.firstWagon = removedWagon.getNextWagon();
         removedWagon.setNextWagon(null);
         return removedWagon;
     }
